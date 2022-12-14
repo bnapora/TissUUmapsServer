@@ -10,6 +10,10 @@ For installation and usage, read the [TissUUmaps online documentation](https://t
 
 For demo and tutorials, see the [TissUUmaps web page](https://tissuumaps.github.io).
 
-docker run -it -p 6001:80 --name=tissuumaps -v D:\DataSets\tissuumaps\images:/mnt/data cavenel/tissuumaps:latest
-
 python -m tissuumaps "/host_Data/DataSets" -p 5005 --debug
+
+
+### Docker Container doesn't show file system
+docker run -it --rm  --entrypoint /bin/bash -p 5006:80  -p 5005:5005 --name=tissuumaps -v /host_Data:/mnt/data/shared gestaltmldev.azurecr.io/tissuumaps
+
+docker run -it -p 6001:80 --name=tissuumaps -v /host_Data:/mnt/data/shared gestaltmldev.azurecr.io/tissuumaps 

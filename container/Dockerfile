@@ -18,3 +18,4 @@ ENV GUNICORN_CMD_ARGS "--bind=0.0.0.0:80 --workers=8 --thread=8 --worker-class=g
 ENV TISSUUMAPS_CONF /tissuumaps.cfg
 
 CMD ["gunicorn", "tissuumaps:app"]
+# CMD ["python", "-m", "tissuumaps", "/mnt/data/shared", "-p", "5001", "--debug"]

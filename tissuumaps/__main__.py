@@ -127,7 +127,8 @@ def main():
         warnings.filterwarnings("ignore")
 
     views.app.run(
-        host=opts.host, port=opts.port, threaded=True, debug=False, use_reloader=False
+        # host=opts.host, port=opts.port, threaded=True, debug=False, use_reloader=False
+        host=opts.host, port=opts.port, threaded=True, debug=True, use_reloader=True
     )
 
 
